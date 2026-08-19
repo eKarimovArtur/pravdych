@@ -358,10 +358,12 @@
 								.stat-number { font-size:20px; }
 								.hero-card { padding:18px; border-radius:18px; }
 								.card-title { font-size:17px; }
-								.tags-bar { padding:10px 12px; flex-wrap:wrap; gap:6px; }
-								.tags-content { max-height:78px !important; display:flex; flex-wrap:wrap; gap:6px; overflow:hidden; transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+								.tags-bar { padding:10px 12px; flex-wrap:nowrap; gap:6px; align-items:center; }
+								.tags-bar-left { flex-shrink:0; }
+								.tags-content { max-height:78px !important; display:flex; flex-wrap:wrap; gap:4px; overflow:hidden; transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1); flex:1; min-width:0; }
 								.tags-content.expanded { max-height:500px !important; }
-								.tags-more-btn { display:flex !important; }
+								.tags-content .card-tag { flex:0 1 auto; white-space:nowrap; font-size:11px; padding:4px 8px; }
+								.tags-more-btn { flex-shrink:0; width:32px; height:26px; display:flex !important; }
 								.lawyers-bar { flex-direction:column; align-items:stretch; gap:12px; padding:14px; }
 								.lawyers-list { flex-direction:column; align-items:stretch; padding:0; gap:6px; }
 								.lawyer-item { padding:6px 6px; }
@@ -395,6 +397,7 @@
 								.footer-col .footer-mobile-toggle { display:flex; }
 								.footer-col .footer-mobile-content { display:none; }
 								.footer-col .footer-mobile-content.open { display:block; }
+								.footer-col .footer-mobile-content.open .footer-links { display:flex !important; flex-direction:column; gap:6px; padding-left:4px; }
 								.footer-col:first-child .footer-heading { display:block; }
 								.footer-col:first-child .footer-links { display:flex; }
 								.footer-col:first-child .footer-mobile-toggle { display:none; }
@@ -1023,7 +1026,7 @@
 					</div>
 				</div>
 				<div class="footer-bottom">
-					<div class="footer-copy">© 2026 Правдыч.рф — Все права защищены</div>
+					<div class="footer-copy">© 2026 Правдычч.рф — Все права защищены</div>
 					<div class="footer-love">
 						Сделано с <span style="color:#ff3b30;">❤️</span> для людей
 					</div>
@@ -1034,21 +1037,32 @@
 		<script>
 			const toggleBtn = document.getElementById('tagsToggleBtn');
 			const tagsContent = document.getElementById('tagsContent');
-			toggleBtn.addEventListener('click', () => {
+			toggleBtn.addEventListener('click', function(e) {
+			e.stopPropagation();
 			const isExpanded = tagsContent.classList.toggle('expanded');
-			toggleBtn.classList.toggle('active', isExpanded);
+			this.classList.toggle('active', isExpanded);
 			if (window.innerWidth <= 768) {
 			tagsContent.style.maxHeight = isExpanded ? '500px' : '78px';
 			} else {
 			tagsContent.style.maxHeight = isExpanded ? tagsContent.scrollHeight + 'px' : '26px';
 			}
 			});
-
+			window.addEventListener('load', function() {
+			if (window.innerWidth <= 768) {
+			tagsContent.style.maxHeight = '78px';
+			}
+			});
+			window.addEventListener('resize', function() {
+			if (window.innerWidth <= 768 && !tagsContent.classList.contains('expanded')) {
+			tagsContent.style.maxHeight = '78px';
+			} else if (window.innerWidth > 768 && !tagsContent.classList.contains('expanded')) {
+			tagsContent.style.maxHeight = '26px';
+			}
+			});
 			function toggleAccordion(element) {
 			const item = element.closest('.pop-item');
 			item.classList.toggle('expanded');
 			}
-
 			function toggleMobileMenu() {
 			const menu = document.getElementById('mobileMenu');
 			const overlay = document.getElementById('mobileOverlay');
@@ -1058,7 +1072,6 @@
 			burger.classList.toggle('active');
 			document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
 			}
-
 			const modalOverlay = document.getElementById('askModalOverlay');
 			const step1 = document.getElementById('modalStep1');
 			const step2 = document.getElementById('modalStep2');
@@ -1067,7 +1080,6 @@
 			const resendCodeContainer = document.getElementById('resendCodeContainer');
 			let countdownInterval;
 			let timeLeft = 30;
-
 			function openAskModal() {
 			step1.classList.add('active');
 			step2.classList.remove('active');
@@ -1082,7 +1094,6 @@
 			document.body.style.overflow = '';
 			}
 			modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeAskModal(); });
-
 			function startResendTimer() {
 			timeLeft = 30;
 			resendCodeContainer.innerHTML = 'Отправить код повторно через <span id="resendTimer">30</span> сек';
@@ -1129,7 +1140,6 @@
 			}
 			});
 			});
-
 			function toggleFooterCol(btn) {
 			const content = btn.nextElementSibling;
 			if (content && content.classList.contains('footer-mobile-content')) {
