@@ -131,7 +131,7 @@
 			.stat-divider { width:1px; height:40px; background:#E0E0E0; }
 			.modal-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.45); backdrop-filter:blur(6px); z-index:2000; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition:all 0.3s; padding:20px; }
 			.modal-overlay.active { opacity:1; visibility:visible; }
-			.modal-card { background:#fff; border-radius:24px; width:100%; max-width:520px; padding:36px; box-shadow:0 20px 40px rgba(0,0,0,0.12); position:relative; transform:translateY(20px); transition:transform 0.3s; max-height:90vh; overflow-y:auto; }
+			.modal-card { background:#fff; border-radius:24px; width:100%; max-width:520px; padding:36px; box-shadow:0 20px 40px rgba(0,0,0,0.12); position:relative; transform:translateY(20px); transition:transform 0.3s; max-height:92vh; overflow-y:auto; }
 			.modal-overlay.active .modal-card { transform:translateY(0); }
 			.modal-close { position:absolute; top:20px; right:20px; background:none; border:none; font-size:24px; color:#999; cursor:pointer; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s,color 0.2s; }
 			.modal-close:hover { background:#f3f4f6; color:#1a1a1a; }
@@ -155,20 +155,23 @@
 			.resend-link:hover { color:#00c4ff; text-decoration:underline; }
 			.success-icon-box { width:72px; height:72px; background:#e3f6fe; color:#00c4ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:36px; margin:0 auto 10px auto; }
 
-			/* ФУТЕР — обновленный */
-			.footer { background:#f4f4f6; border-top:1px solid rgba(0,0,0,0.06); padding:40px 32px 24px; margin-top:50px; display:flex; justify-content:center; width:100%; }
+			/* ===== ФУТЕР ===== */
+			.footer { background:#f4f4f6; border-top:1px solid rgba(0,0,0,0.06); padding:44px 32px 24px; margin-top:50px; display:flex; justify-content:center; width:100%; }
 			.footer-container { max-width:1280px; width:100%; display:flex; flex-direction:column; gap:32px; }
 			.footer-top { display:grid; grid-template-columns:1.5fr 1fr 1fr 1.2fr 1.8fr; gap:28px; }
 			.footer-col { display:flex; flex-direction:column; }
-			.footer-brand { margin-bottom:12px; }
-			.footer-brand-name { font-size:22px; font-weight:800; color:#00c4ff; letter-spacing:0.02em; text-decoration:none; display:block; }
-			.footer-brand-tagline { font-size:13px; color:#71717a; line-height:1.5; margin-top:6px; max-width:280px; }
-			.footer-email-link { font-size:14px; font-weight:600; color:#00c4ff; text-decoration:none; transition:opacity 0.2s; margin-top:4px; }
+
+			/* Бренд в футере */
+			.footer-brand-name { font-size:22px; font-weight:800; color:#00c4ff; letter-spacing:0.02em; display:block; margin-bottom:6px; }
+			.footer-brand-tagline { font-size:13px; color:#71717a; line-height:1.5; max-width:280px; }
+			.footer-email-link { font-size:14px; font-weight:600; color:#00c4ff; text-decoration:none; transition:opacity 0.2s; margin-top:8px; }
 			.footer-email-link:hover { opacity:0.8; text-decoration:underline; }
+
 			.footer-heading { font-size:14px; font-weight:700; color:#18181b; letter-spacing:0.01em; margin-bottom:14px; }
 			.footer-links { list-style:none; display:flex; flex-direction:column; gap:8px; }
 			.footer-links a { font-size:13px; color:#71717a; text-decoration:none; transition:color 0.2s; }
 			.footer-links a:hover { color:#00c4ff; }
+
 			.subscribe-form-box { display:flex; background:#fff; border:1px solid #e4e4e7; border-radius:10px; padding:3px; transition:border-color 0.2s; }
 			.subscribe-form-box:focus-within { border-color:#00c4ff; }
 			.subscribe-input { flex:1; padding:8px 12px; font-size:13px; font-family:inherit; background:transparent; border:none; outline:none; color:#18181b; min-width:0; }
@@ -177,7 +180,7 @@
 			.footer-bottom { border-top:1px solid #e4e4e7; padding-top:18px; display:flex; justify-content:space-between; align-items:center; font-size:13px; color:#888; }
 			.footer-love { display:flex; align-items:center; gap:4px; }
 
-			/* МОБИЛЬНЫЙ ФУТЕР — РАСКРЫВАЮЩИЙСЯ */
+			/* ===== МОБИЛЬНЫЙ ФУТЕР — РАСКРЫВАЮЩИЙСЯ ===== */
 			.footer-mobile-toggle {
 				display:none;
 				background:none;
@@ -227,7 +230,7 @@
 				font-size:14px;
 			}
 
-			/* ПЛАВАЮЩАЯ КНОПКА */
+			/* ===== ПЛАВАЮЩАЯ КНОПКА ===== */
 			.fab-ask {
 				display:none;
 				position:fixed;
@@ -259,7 +262,7 @@
 			.fab-ask .question-mark { display:inline-block; transition:transform 0.3s; }
 			.fab-ask:hover .question-mark { transform:rotate(15deg) scale(1.1); }
 
-			/* БУРГЕР-МЕНЮ */
+			/* ===== БУРГЕР-МЕНЮ ===== */
 			.burger-btn {
 				display:none;
 				flex-direction:column;
@@ -301,757 +304,774 @@
 				gap:6px;
 			}
 			.mobile-menu.open { right:0; }
-				.mobile-menu a {
-					font-size:18px;
-					font-weight:600;
-					color:#282828;
-					text-decoration:none;
-					padding:14px 6px;
-					border-bottom:1px solid #f0f0f0;
-					transition:color 0.2s, padding-left 0.2s;
-				}
-				.mobile-menu a:hover { color:#00c4ff; padding-left:12px; }
-				.mobile-menu .mobile-ask-btn {
-					margin-top:20px;
-					background:#00c4ff;
-					color:#fff;
-					border:none;
-					border-radius:12px;
-					padding:16px;
-					font-size:17px;
-					font-weight:700;
-					cursor:pointer;
-					transition:background 0.2s,transform 0.2s;
-				}
-				.mobile-menu .mobile-ask-btn:hover { background:#0099dd; transform:scale(1.02); }
-				.mobile-overlay {
-					position:fixed;
-					top:0;
-					left:0;
-					width:100%;
-					height:100%;
-					background:rgba(0,0,0,0.3);
-					z-index:1040;
-					opacity:0;
-					visibility:hidden;
-					transition:all 0.35s;
-				}
-				.mobile-overlay.active { opacity:1; visibility:visible; }
+			.mobile-menu a {
+				font-size:18px;
+				font-weight:600;
+				color:#282828;
+				text-decoration:none;
+				padding:14px 6px;
+				border-bottom:1px solid #f0f0f0;
+				transition:color 0.2s, padding-left 0.2s;
+			}
+			.mobile-menu a:hover { color:#00c4ff; padding-left:12px; }
+			.mobile-menu .mobile-ask-btn {
+				margin-top:20px;
+				background:#00c4ff;
+				color:#fff;
+				border:none;
+				border-radius:12px;
+				padding:16px;
+				font-size:17px;
+				font-weight:700;
+				cursor:pointer;
+				transition:background 0.2s,transform 0.2s;
+			}
+			.mobile-menu .mobile-ask-btn:hover { background:#0099dd; transform:scale(1.02); }
+			.mobile-overlay {
+				position:fixed;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background:rgba(0,0,0,0.3);
+				z-index:1040;
+				opacity:0;
+				visibility:hidden;
+				transition:all 0.35s;
+			}
+			.mobile-overlay.active { opacity:1; visibility:visible; }
 
-				/* АДАПТИВ */
-				@media (max-width:1100px) {
-					.footer-top { grid-template-columns:repeat(2,1fr); gap:32px; }
-					.how-it-works { flex-direction:column; align-items:flex-start; gap:16px; }
-					.how-steps { width:100%; flex-wrap:wrap; }
-					.how-step { flex:1 1 200px; }
-					.how-arrow { display:none; }
-				}
-				@media (max-width:1024px) {
-					.hero-block { flex:0 0 340px; }
-					.hero-title { font-size:34px; }
-					.bottom-section-row { flex-direction:column; }
-					.popular-col,.rating-col { width:100%; }
-				}
-				@media (max-width:768px) {
-					.header { padding:14px 16px; }
-					.header-container { flex-wrap:nowrap; gap:8px; }
-					.nav-links { display:none; }
-					.btn-ask { display:none; }
-					.burger-btn { display:flex; }
-					.logo img { height:44px; }
+			/* ===== АДАПТИВ ===== */
+			@media (max-width:1100px) {
+				.footer-top { grid-template-columns:repeat(2,1fr); gap:32px; }
+				.how-it-works { flex-direction:column; align-items:flex-start; gap:16px; }
+				.how-steps { width:100%; flex-wrap:wrap; }
+				.how-step { flex:1 1 200px; }
+				.how-arrow { display:none; }
+			}
+			@media (max-width:1024px) {
+				.hero-block { flex:0 0 340px; }
+				.hero-title { font-size:34px; }
+				.bottom-section-row { flex-direction:column; }
+				.popular-col,.rating-col { width:100%; }
+			}
+			@media (max-width:768px) {
+				/* ХЕДЕР */
+				.header { padding:14px 16px; }
+				.header-container { flex-wrap:nowrap; gap:8px; }
+				.nav-links { display:none; }
+				.btn-ask { display:none; }
+				.burger-btn { display:flex; }
+				.logo img { height:44px; }
 
-					.page-wrapper { padding:78px 14px 36px; gap:12px; }
-					.hero-section-row { flex-direction:column; gap:14px; }
-					.hero-block { flex:1 1 auto; }
-					.hero-title { font-size:26px; }
-					.hero-subtitle { max-width:100%; font-size:14px; margin-top:8px; margin-bottom:14px; }
-					.hero-stats { gap:14px; }
-					.stat-number { font-size:20px; }
-					.hero-card { padding:18px; border-radius:18px; }
-					.card-title { font-size:17px; }
-					.tags-bar { padding:10px 12px; flex-wrap:wrap; gap:6px; }
-					.tags-content { max-height:22px; }
-					.tags-more-btn { width:26px; height:22px; font-size:11px; }
-					.lawyers-bar { flex-direction:column; align-items:stretch; gap:12px; padding:14px; }
-					.lawyers-list { flex-direction:column; align-items:stretch; padding:0; gap:6px; }
-					.lawyer-item { padding:6px 6px; }
-					.lawyer-divider { display:none; }
-					.lawyers-all-link { text-align:left; padding-top:4px; }
-					.how-it-works { padding:14px; }
-					.how-left { min-width:auto; width:100%; }
-					.how-steps { flex-direction:column; align-items:stretch; gap:10px; }
-					.how-step { flex:1 1 auto; }
-					.how-arrow { display:none; }
-					.bottom-section-row { flex-direction:column; gap:14px; }
-					.pop-item-main { flex-direction:column; align-items:flex-start; gap:6px; }
-					.pop-meta { width:100%; justify-content:space-between; flex-wrap:wrap; gap:4px; }
-					.pop-answers { font-size:12px; }
-					.pop-avatars .pop-mini-avatar { width:22px; height:22px; }
-					.pop-views { font-size:12px; }
-					.pop-action-link { font-size:12px; }
-					.pop-answer-box { padding:0 10px; }
-					.pop-item.expanded .pop-answer-box { padding:10px 14px; max-height:300px; }
-					.pop-answer-text { font-size:13px; }
-					.rating-header-bar { flex-wrap:wrap; gap:6px; }
-					.rating-item { font-size:14px; }
-					.rating-answers-tag { font-size:12px; padding:2px 8px; }
-					.content-card { padding:16px; }
+				/* КОНТЕНТ */
+				.page-wrapper { padding:78px 14px 36px; gap:12px; }
+				.hero-section-row { flex-direction:column; gap:14px; }
+				.hero-block { flex:1 1 auto; }
+				.hero-title { font-size:26px; }
+				.hero-subtitle { max-width:100%; font-size:14px; margin-top:8px; margin-bottom:14px; }
+				.hero-stats { gap:14px; }
+				.stat-number { font-size:20px; }
+				.hero-card { padding:18px; border-radius:18px; }
+				.card-title { font-size:17px; }
+				.tags-bar { padding:10px 12px; flex-wrap:wrap; gap:6px; }
+				.tags-content { max-height:22px; }
+				.tags-more-btn { width:26px; height:22px; font-size:11px; }
+				.lawyers-bar { flex-direction:column; align-items:stretch; gap:12px; padding:14px; }
+				.lawyers-list { flex-direction:column; align-items:stretch; padding:0; gap:6px; }
+				.lawyer-item { padding:6px 6px; }
+				.lawyer-divider { display:none; }
+				.lawyers-all-link { text-align:left; padding-top:4px; }
+				.how-it-works { padding:14px; }
+				.how-left { min-width:auto; width:100%; }
+				.how-steps { flex-direction:column; align-items:stretch; gap:10px; }
+				.how-step { flex:1 1 auto; }
+				.how-arrow { display:none; }
+				.bottom-section-row { flex-direction:column; gap:14px; }
+				.pop-item-main { flex-direction:column; align-items:flex-start; gap:6px; }
+				.pop-meta { width:100%; justify-content:space-between; flex-wrap:wrap; gap:4px; }
+				.pop-answers { font-size:12px; }
+				.pop-avatars .pop-mini-avatar { width:22px; height:22px; }
+				.pop-views { font-size:12px; }
+				.pop-action-link { font-size:12px; }
+				.pop-answer-box { padding:0 10px; }
+				.pop-item.expanded .pop-answer-box { padding:10px 14px; max-height:300px; }
+				.pop-answer-text { font-size:13px; }
+				.rating-header-bar { flex-wrap:wrap; gap:6px; }
+				.rating-item { font-size:14px; }
+				.rating-answers-tag { font-size:12px; padding:2px 8px; }
+				.content-card { padding:16px; }
 
-					.fab-ask { display:flex !important; width:56px; height:56px; font-size:26px; bottom:16px; right:16px; }
+				/* ПЛАВАЮЩАЯ КНОПКА */
+				.fab-ask { display:flex !important; width:56px; height:56px; font-size:26px; bottom:16px; right:16px; }
 
-					/* Футер мобильный */
-					.footer { padding:24px 14px 16px; margin-top:24px; }
-					.footer-top { display:block; }
-					.footer-col { margin-bottom:0; }
-					.footer-col .footer-heading { display:none; }
-					.footer-col .footer-links { display:none; }
-					.footer-col .footer-mobile-toggle { display:flex; }
-					.footer-col .footer-mobile-content { display:none; }
-					.footer-col .footer-mobile-content.open { display:block; }
-					.footer-col:first-child .footer-heading { display:block; }
-					.footer-col:first-child .footer-links { display:flex; }
-					.footer-col:first-child .footer-mobile-toggle { display:none; }
-					.footer-col:last-child .footer-heading { display:block; }
-					.footer-col:last-child .footer-links { display:flex; flex-direction:column; }
-					.footer-col:last-child .footer-mobile-toggle { display:none; }
-					.footer-col:last-child .footer-brand-tagline { max-width:100%; }
-					.footer-bottom { flex-direction:column; gap:8px; align-items:flex-start; }
-					.subscribe-form-box { width:100%; }
-					.subscribe-input { min-width:0; }
+				/* ФУТЕР — МОБИЛЬНЫЙ РАСКРЫВАЮЩИЙСЯ */
+				.footer { padding:20px 14px 16px; margin-top:20px; }
+				.footer-top { display:block; }
+				.footer-col { margin-bottom:0; }
 
-					.footer-brand-name { font-size:20px; }
-					.footer-brand-tagline { font-size:12px; }
-					.footer-container { gap:16px; }
+				/* Скрываем заголовки и списки на мобильных, показываем кнопки-аккордеон */
+				.footer-col .footer-heading { display:none; }
+				.footer-col .footer-links { display:none; }
+				.footer-col .footer-mobile-toggle { display:flex; }
+				.footer-col .footer-mobile-content { display:none; }
+				.footer-col .footer-mobile-content.open { display:block; }
 
-					.modal-card { padding:24px; max-height:92vh; }
-					.code-digit-input { width:48px; height:52px; font-size:20px; }
-				}
-				@media (max-width:480px) {
-					.hero-title { font-size:22px; }
-					.fab-ask { width:50px; height:50px; font-size:22px; bottom:14px; right:14px; }
-					.mobile-menu { padding:70px 18px 30px; width:280px; }
-					.footer-brand-name { font-size:18px; }
-				}
-			</style>
-		</head>
-		<body>
-			<header class="header">
-				<div class="header-container">
-					<a href="#" class="logo" aria-label="Правдыч.рф — главная">
-						<img src="images/logo.png" alt="Правдыч.рф">
-					</a>
-					<div class="nav-and-actions">
-						<ul class="nav-links">
-							<li><a href="#">Вопросы</a></li>
-							<li><a href="#">Юристы</a></li>
-							<li><a href="#">Рейтинг</a></li>
-							<li><a href="#">Статьи</a></li>
-						</ul>
-						<button class="btn-ask" onclick="openAskModal()">Задать вопрос бесплатно</button>
-						<button class="burger-btn" id="burgerBtn" onclick="toggleMobileMenu()" aria-label="Меню">
-							<span></span><span></span><span></span>
-						</button>
-					</div>
-				</div>
-			</header>
+				/* Первая колонка (бренд) — без аккордеона */
+				.footer-col:first-child .footer-heading { display:block; }
+				.footer-col:first-child .footer-links { display:flex; }
+				.footer-col:first-child .footer-mobile-toggle { display:none; }
+				.footer-col:first-child .footer-brand-tagline { max-width:100%; }
 
-			<!-- Мобильное меню -->
-			<div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
-			<nav class="mobile-menu" id="mobileMenu">
-				<a href="#">Вопросы</a>
-				<a href="#">Юристы</a>
-				<a href="#">Рейтинг</a>
-				<a href="#">Статьи</a>
-				<button class="mobile-ask-btn" onclick="openAskModal(); toggleMobileMenu();">Задать вопрос бесплатно</button>
-			</nav>
+				/* Последняя колонка (подписка) — без аккордеона */
+				.footer-col:last-child .footer-heading { display:block; }
+				.footer-col:last-child .footer-links { display:flex; flex-direction:column; }
+				.footer-col:last-child .footer-mobile-toggle { display:none; }
+				.footer-col:last-child .footer-brand-tagline { max-width:100%; }
 
-			<!-- ПЛАВАЮЩАЯ КНОПКА -->
-			<button class="fab-ask" onclick="openAskModal()" aria-label="Задать вопрос">
-				<span class="question-mark">?</span>
-			</button>
+				.footer-bottom { flex-direction:column; gap:8px; align-items:flex-start; }
+				.subscribe-form-box { width:100%; }
+				.subscribe-input { min-width:0; }
 
-			<main class="page-wrapper">
-				<section class="hero-section-row">
-					<div class="hero-block">
-						<h1 class="hero-title">Задайте <span class="highlight">бесплатный</span> вопрос.<br>Получите ответ<br>от юриста.</h1>
-						<p class="hero-subtitle">Быстрая и бесплатная помощь профессиональных юристов и адвокатов</p>
-						<div class="hero-stats">
-							<div class="stat-item">
-								<span class="stat-number">12 847</span>
-								<span class="stat-label">вопросов</span>
-							</div>
-							<div class="stat-divider"></div>
-							<div class="stat-item">
-								<span class="stat-number">4 327</span>
-								<span class="stat-label">юристов</span>
-							</div>
-						</div>
-					</div>
-					<div class="hero-card middle-card">
-						<div>
-							<div class="card-top">
-								<div class="card-avatar" style="background-image:url('images/people/women/woman_1.png');">
-									<span class="online-dot"></span>
-								</div>
-								<div class="card-category">Трудовое право</div>
-							</div>
-							<h3 class="card-title">Может ли работодатель уволить без объяснения причины?</h3>
-							<div class="card-time">2 часа назад</div>
-							<div class="card-tags">
-								<a href="#" class="card-tag">увольнение</a>
-								<a href="#" class="card-tag">без объяснения</a>
-								<a href="#" class="card-tag">работодатель</a>
-								<a href="#" class="card-tag">трудовой договор</a>
-							</div>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="card-link">Читать статью →</a>
-						</div>
-					</div>
-					<div class="hero-card right-card">
-						<div>
-							<div class="card-top">
-								<div class="card-avatar" style="background-image:url('images/people/men/man_1.png');"></div>
-								<div class="card-category">Семейное право</div>
-							</div>
-							<h3 class="card-title">Как разделить имущество при разводе?</h3>
-							<div class="card-time">5 часов назад</div>
-							<div class="card-tags">
-								<a href="#" class="card-tag">развод</a>
-								<a href="#" class="card-tag">имущество</a>
-								<a href="#" class="card-tag">совместная собственность</a>
-								<a href="#" class="card-tag">раздел имущества</a>
-							</div>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="card-link">Читать статью →</a>
-						</div>
-					</div>
-				</section>
-				<section class="tags-bar">
-					<div class="tags-bar-left">
-						<svg class="tags-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-							<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
-							<line x1="7" y1="7" x2="7.01" y2="7"/>
-						</svg>
-						<span class="tags-title">Теги</span>
-					</div>
-					<div class="tags-content" id="tagsContent">
-						<a href="#" class="card-tag">трудовое право</a>
-						<a href="#" class="card-tag">семейное право</a>
-						<a href="#" class="card-tag">жилищное право</a>
-						<a href="#" class="card-tag">уголовное право</a>
-						<a href="#" class="card-tag">гражданское право</a>
-						<a href="#" class="card-tag">договоры</a>
-						<a href="#" class="card-tag">защита прав потребителей</a>
-						<a href="#" class="card-tag">налоги</a>
-						<a href="#" class="card-tag">наследство</a>
-						<a href="#" class="card-tag">недвижимость</a>
-						<a href="#" class="card-tag">банкротство</a>
-						<a href="#" class="card-tag">автомобильное право</a>
-					</div>
-					<button class="tags-more-btn" id="tagsToggleBtn">...</button>
-				</section>
-				<section class="lawyers-bar">
-					<div class="lawyers-title">Лучшие<br>адвокаты</div>
-					<div class="lawyers-list">
-						<a href="#" class="lawyer-item">
-							<div class="lawyer-avatar" style="background-image:url('images/people/women/woman_1.png');">
-								<span class="online-dot"></span>
-							</div>
-							<div class="lawyer-info">
-								<div class="lawyer-name">Анна Смирнова</div>
-								<div class="lawyer-answers-count">154 ответа</div>
-								<div class="lawyer-spec">Семейное право</div>
-							</div>
-						</a>
-						<div class="lawyer-divider"></div>
-						<a href="#" class="lawyer-item">
-							<div class="lawyer-avatar" style="background-image:url('images/people/women/woman_2.png');"></div>
-							<div class="lawyer-info">
-								<div class="lawyer-name">Екатерина Волкова</div>
-								<div class="lawyer-answers-count">142 ответа</div>
-								<div class="lawyer-spec">Гражданское право</div>
-							</div>
-						</a>
-						<div class="lawyer-divider"></div>
-						<a href="#" class="lawyer-item">
-							<div class="lawyer-avatar" style="background-image:url('images/people/men/man_2.png');">
-								<span class="online-dot"></span>
-							</div>
-							<div class="lawyer-info">
-								<div class="lawyer-name">Дмитрий Кузнецов</div>
-								<div class="lawyer-answers-count">118 ответов</div>
-								<div class="lawyer-spec">Уголовное право</div>
-							</div>
-						</a>
-					</div>
-					<a href="#" class="lawyers-all-link">Смотреть всех<br>адвокатов →</a>
-				</section>
-				<section class="how-it-works">
-					<div class="how-left">
-						<svg class="how-info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<circle cx="12" cy="12" r="10"/>
-							<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-							<line x1="12" y1="17" x2="12.01" y2="17"/>
-						</svg>
-						<span class="how-title">Как смотреть ответы?</span>
-					</div>
-					<div class="how-steps">
-						<div class="how-step">
-							<div class="how-step-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-									<polyline points="14 2 14 8 20 8"/>
-									<line x1="16" y1="13" x2="8" y2="13"/>
-									<line x1="16" y1="17" x2="8" y2="17"/>
-									<polyline points="10 9 9 9 8 9"/>
-								</svg>
-							</div>
-							<div class="how-step-text">
-								<span class="how-step-name">1. Выберите вопрос</span>
-								<span class="how-step-sub">Или задайте свой</span>
-							</div>
-						</div>
-						<span class="how-arrow">→</span>
-						<div class="how-step">
-							<div class="how-step-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-								</svg>
-							</div>
-							<div class="how-step-text">
-								<span class="how-step-name">2. Откройте ответы</span>
-								<span class="how-step-sub">Нажмите «Смотреть ответы»</span>
-							</div>
-						</div>
-						<span class="how-arrow">→</span>
-						<div class="how-step">
-							<div class="how-step-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-									<path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-								</svg>
-							</div>
-							<div class="how-step-text">
-								<span class="how-step-name">3. Читайте ответы</span>
-								<span class="how-step-sub">Изучите мнение адвокатов</span>
-							</div>
-						</div>
-						<span class="how-arrow">→</span>
-						<div class="how-step">
-							<div class="how-step-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M12 20h9"/>
-									<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-								</svg>
-							</div>
-							<div class="how-step-text">
-								<span class="how-step-name">4. Задайте уточнение</span>
-								<span class="how-step-sub">При необходимости</span>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="bottom-section-row">
-					<div class="popular-col">
-						<div class="section-header-title">Популярные вопросы</div>
-						<div class="content-card">
-							<div class="pop-item expanded">
-								<div class="pop-item-main" onclick="toggleAccordion(this)">
-									<span class="pop-question">Можно ли вернуть деньги за некачественный товар?</span>
-									<div class="pop-meta">
-										<span class="card-tag">Защита прав потребителей</span>
-										<span class="pop-answers">Ответов: 15</span>
-										<div class="pop-avatars">
-											<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_1.png');"></div>
-											<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_1.png');"></div>
-											<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_2.png');"></div>
-										</div>
-										<div class="pop-views">
-											<svg class="pop-eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-												<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-												<circle cx="12" cy="12" r="3"/>
-											</svg>1.4k
-										</div>
-										<span class="pop-action-link">Смотреть ответы →</span>
-									</div>
-								</div>
-								<div class="pop-answer-box">
-									<div class="pop-answer-header">
-										<span class="pop-answer-author">Ответ адвоката Анны Смирновой</span>
-										<span class="pop-answer-time">2 часа назад</span>
-									</div>
-									<p class="pop-answer-text">Да, вы имеете право вернуть деньги за некачественный товар в течение 14 дней, не считая дня его покупки (статья 25 Закона РФ «О защите прав потребителей»).</p>
-									<a href="#" class="pop-read-more">Читать статью →</a>
-								</div>
-							</div>
-							<div class="pop-item">
-								<div class="pop-item-main" onclick="toggleAccordion(this)">
-									<span class="pop-question">Что делать, если затопили соседи?</span>
-									<div class="pop-meta">
-										<span class="card-tag">Жилищное право</span>
-										<span class="pop-answers">Ответов: 9</span>
-										<div class="pop-avatars">
-											<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_2.png');"></div>
-											<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_3.png');"></div>
-											<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_1.png');"></div>
-										</div>
-										<div class="pop-views">
-											<svg class="pop-eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-												<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-												<circle cx="12" cy="12" r="3"/>
-											</svg>980
-										</div>
-										<span class="pop-action-link">Смотреть ответы →</span>
-									</div>
-								</div>
-								<div class="pop-answer-box">
-									<div class="pop-answer-header">
-										<span class="pop-answer-author">Ответ адвоката Дмитрия Кузнецова</span>
-										<span class="pop-answer-time">5 часов назад</span>
-									</div>
-									<p class="pop-answer-text">В первую очередь необходимо зафиксировать факт затопления, вызвав представителей управляющей компании для составления акта...</p>
-									<a href="#" class="pop-read-more">Читать статью →</a>
-								</div>
-							</div>
-							<div class="pop-item">
-								<div class="pop-item-main" onclick="toggleAccordion(this)">
-									<span class="pop-question">Как оспорить штраф ГИБДД?</span>
-									<div class="pop-meta">
-										<span class="card-tag">Автомобильное право</span>
-										<span class="pop-answers">Ответов: 11</span>
-										<div class="pop-avatars">
-											<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_4.png');"></div>
-											<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_3.png');"></div>
-											<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_1.png');"></div>
-										</div>
-										<div class="pop-views">
-											<svg class="pop-eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-												<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-												<circle cx="12" cy="12" r="3"/>
-											</svg>2.1k
-										</div>
-										<span class="pop-action-link">Смотреть ответы →</span>
-									</div>
-								</div>
-								<div class="pop-answer-box">
-									<div class="pop-answer-header">
-										<span class="pop-answer-author">Ответ адвоката Екатерины Волковой</span>
-										<span class="pop-answer-time">Вчера</span>
-									</div>
-									<p class="pop-answer-text">Штраф можно оспорить в течение 10 дней с момента получения копии постановления. Потребуется составить жалобу в ГИБДД или суд...</p>
-									<a href="#" class="pop-read-more">Читать статью →</a>
-								</div>
-							</div>
-							<div class="pop-item">
-								<div class="pop-item-main" onclick="toggleAccordion(this)">
-									<span class="pop-question">Как оформить наследство по завещанию?</span>
-									<div class="pop-meta">
-										<span class="card-tag">Наследство</span>
-										<span class="pop-answers">Ответов: 7</span>
-										<div class="pop-avatars">
-											<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_1.png');"></div>
-											<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_2.png');"></div>
-											<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_2.png');"></div>
-										</div>
-										<div class="pop-views">
-											<svg class="pop-eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-												<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-												<circle cx="12" cy="12" r="3"/>
-											</svg>850
-										</div>
-										<span class="pop-action-link">Смотреть ответы →</span>
-									</div>
-								</div>
-								<div class="pop-answer-box">
-									<div class="pop-answer-header">
-										<span class="pop-answer-author">Ответ адвоката Анны Смирновой</span>
-										<span class="pop-answer-time">3 дня назад</span>
-									</div>
-									<p class="pop-answer-text">Для принятия наследства необходимо обратиться к нотариусу по месту открытия наследства в течение 6 месяцев со дня смерти наследодателя с паспортом и завещанием.</p>
-									<a href="#" class="pop-read-more">Читать статью →</a>
-								</div>
-							</div>
-						</div>
-						<a href="#" class="pop-all-btn">Смотреть все вопросы →</a>
-					</div>
-					<div class="rating-col">
-						<div class="lawyer-cta-banner">
-							<span class="lawyer-cta-badge">Для специалистов</span>
-							<h3 class="lawyer-cta-title">Вы юрист или адвокат?</h3>
-							<p class="lawyer-cta-desc">Присоединяйтесь к платформе, помогайте людям, отвечайте на вопросы и находите новых клиентов.</p>
-							<a href="#" class="lawyer-cta-btn">Зарегистрироваться как эксперт</a>
-						</div>
-						<div class="rating-header-bar">
-							<span class="section-header-title">Рейтинг адвокатов</span>
-							<a href="#" class="rating-all-link">Весь рейтинг →</a>
-						</div>
-						<div class="content-card">
-							<div class="rating-list">
-								<a href="#" class="rating-item">
-									<div class="rating-left">
-										<span class="rating-pos">1.</span>
-										<span class="rating-name">Анна Смирнова</span>
-									</div>
-									<span class="rating-answers-tag">154 ответа</span>
-								</a>
-								<a href="#" class="rating-item">
-									<div class="rating-left">
-										<span class="rating-pos">2.</span>
-										<span class="rating-name">Екатерина Волкова</span>
-									</div>
-									<span class="rating-answers-tag">142 ответа</span>
-								</a>
-								<a href="#" class="rating-item">
-									<div class="rating-left">
-										<span class="rating-pos">3.</span>
-										<span class="rating-name">Дмитрий Кузнецов</span>
-									</div>
-									<span class="rating-answers-tag">118 ответов</span>
-								</a>
-								<a href="#" class="rating-item">
-									<div class="rating-left">
-										<span class="rating-pos">4.</span>
-										<span class="rating-name">Игорь Соколов</span>
-									</div>
-									<span class="rating-answers-tag">95 ответов</span>
-								</a>
-								<a href="#" class="rating-item">
-									<div class="rating-left">
-										<span class="rating-pos">5.</span>
-										<span class="rating-name">Мария Лебедева</span>
-									</div>
-									<span class="rating-answers-tag">82 ответа</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
+				.footer-brand-name { font-size:20px; }
+				.footer-brand-tagline { font-size:12px; }
+				.footer-container { gap:14px; }
 
-			<div class="modal-overlay" id="askModalOverlay">
-				<div class="modal-card">
-					<button class="modal-close" onclick="closeAskModal()">&times;</button>
-					<div class="modal-step active" id="modalStep1">
-						<span class="modal-free-badge">Бесплатно</span>
-						<h3 class="modal-title">Задайте вопрос юристу</h3>
-						<p class="modal-subtitle">Опишите вашу проблему. Юристы дадут первичную консультацию абсолютно бесплатно.</p>
-						<form onsubmit="submitStep1(event)">
-							<div class="form-group">
-								<label>Ваше имя</label>
-								<input type="text" id="inputName" placeholder="Как к вам обращаться?" required="">
-							</div>
-							<div class="form-group">
-								<label>Ваш вопрос</label>
-								<textarea id="inputQuestion" rows="4" placeholder="Подробно опишите ситуацию..." required=""></textarea>
-							</div>
-							<div class="form-group">
-								<label>Телефон для подтверждения</label>
-								<input type="tel" id="inputPhone" placeholder="+7 (999) 000-00-00" required="">
-							</div>
-							<button type="submit" class="modal-submit-btn">Получить код подтверждения</button>
-						</form>
-					</div>
-					<div class="modal-step" id="modalStep2">
-						<h3 class="modal-title">Подтверждение номера</h3>
-						<p class="modal-subtitle">Мы отправили SMS с 4-значным кодом подтверждения на ваш номер телефона.</p>
-						<form onsubmit="submitStep2(event)">
-							<div class="code-inputs-container">
-								<input type="text" maxlength="1" class="code-digit-input" required="" autofocus="">
-								<input type="text" maxlength="1" class="code-digit-input" required="">
-								<input type="text" maxlength="1" class="code-digit-input" required="">
-								<input type="text" maxlength="1" class="code-digit-input" required="">
-							</div>
-							<div class="resend-container" id="resendCodeContainer">
-								Отправить код повторно через <span id="resendTimer">30</span> сек
-							</div>
-							<button type="submit" class="modal-submit-btn">Подтвердить и отправить</button>
-						</form>
-					</div>
-					<div class="modal-step" id="modalStep3" style="text-align:center;">
-						<div class="success-icon-box">✓</div>
-						<h3 class="modal-title">Вопрос на модерации</h3>
-						<p class="modal-subtitle">Спасибо! Ваш вопрос успешно получен. После короткой проверки модератором он появится на сайте, и юристы начнут писать ответы.</p>
-						<button type="button" class="modal-submit-btn" onclick="closeAskModal()">Понятно</button>
-					</div>
+				.modal-card { padding:24px; max-height:92vh; }
+				.code-digit-input { width:48px; height:52px; font-size:20px; }
+			}
+			@media (max-width:480px) {
+				.hero-title { font-size:22px; }
+				.fab-ask { width:50px; height:50px; font-size:22px; bottom:14px; right:14px; }
+				.mobile-menu { padding:70px 18px 30px; width:280px; }
+				.footer-brand-name { font-size:18px; }
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-container">
+				<a href="#" class="logo" aria-label="Правдыч.рф — главная">
+					<img src="images/logo.png" alt="Правдыч.рф">
+				</a>
+				<div class="nav-and-actions">
+					<ul class="nav-links">
+						<li><a href="#">Вопросы</a></li>
+						<li><a href="#">Юристы</a></li>
+						<li><a href="#">Рейтинг</a></li>
+						<li><a href="#">Статьи</a></li>
+					</ul>
+					<button class="btn-ask" onclick="openAskModal()">Задать вопрос бесплатно</button>
+					<button class="burger-btn" id="burgerBtn" onclick="toggleMobileMenu()" aria-label="Меню">
+						<span></span><span></span><span></span>
+					</button>
 				</div>
 			</div>
+		</header>
 
-			<footer class="footer">
-				<div class="footer-container">
-					<div class="footer-top">
-						<!-- Первая колонка — бренд с текстом вместо логотипа -->
-						<div class="footer-col">
-							<div class="footer-brand">
-								<span class="footer-brand-name">Правдыч.рф</span>
-								<p class="footer-brand-tagline">Бесплатная юридическая помощь. Профессиональные ответы на юридические вопросы от проверенных адвокатов.</p>
-							</div>
-							<a href="mailto:info@правдыч.рф" class="footer-email-link">info@правдыч.рф</a>
+		<!-- Мобильное меню -->
+		<div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+		<nav class="mobile-menu" id="mobileMenu">
+			<a href="#">Вопросы</a>
+			<a href="#">Юристы</a>
+			<a href="#">Рейтинг</a>
+			<a href="#">Статьи</a>
+			<button class="mobile-ask-btn" onclick="openAskModal(); toggleMobileMenu();">Задать вопрос бесплатно</button>
+		</nav>
+
+		<!-- ПЛАВАЮЩАЯ КНОПКА -->
+		<button class="fab-ask" onclick="openAskModal()" aria-label="Задать вопрос">
+			<span class="question-mark">?</span>
+		</button>
+
+		<main class="page-wrapper">
+			<section class="hero-section-row">
+				<div class="hero-block">
+					<h1 class="hero-title">Задайте <span class="highlight">бесплатный</span> вопрос.<br>Получите ответ<br>от юриста.</h1>
+					<p class="hero-subtitle">Быстрая и бесплатная помощь профессиональных юристов и адвокатов</p>
+					<div class="hero-stats">
+						<div class="stat-item">
+							<span class="stat-number">12 847</span>
+							<span class="stat-label">вопросов</span>
 						</div>
-						<div class="footer-col">
-							<h4 class="footer-heading">Платформа</h4>
-							<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Платформа</button>
-							<div class="footer-mobile-content">
-								<ul class="footer-links">
-									<li><a href="#">Вопросы</a></li>
-									<li><a href="#">Юристы</a></li>
-									<li><a href="#">Рейтинг</a></li>
-									<li><a href="#">Статьи</a></li>
-									<li><a href="#">О сервисе</a></li>
-									<li><a href="#">Как это работает</a></li>
-									<li><a href="#">Правила сервиса</a></li>
-									<li><a href="#">Конфиденциальность</a></li>
-								</ul>
-							</div>
+						<div class="stat-divider"></div>
+						<div class="stat-item">
+							<span class="stat-number">4 327</span>
+							<span class="stat-label">юристов</span>
 						</div>
-						<div class="footer-col">
-							<h4 class="footer-heading">Помощь</h4>
-							<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Помощь</button>
-							<div class="footer-mobile-content">
-								<ul class="footer-links">
-									<li><a href="#">Центр поддержки</a></li>
-									<li><a href="#">Частые вопросы</a></li>
-									<li><a href="#">Для адвокатов</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="footer-col">
-							<h4 class="footer-heading">Правовая информация</h4>
-							<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Правовая информация</button>
-							<div class="footer-mobile-content">
-								<ul class="footer-links">
-									<li><a href="#">Пользовательское соглашение</a></li>
-									<li><a href="#">Политика конфиденциальности</a></li>
-									<li><a href="#">Обработка персональных данных</a></li>
-									<li><a href="#">Согласие на обработку данных</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="footer-col">
-							<h4 class="footer-heading">Подпишитесь на рассылку</h4>
-							<p class="footer-brand-tagline" style="max-width:100%;font-size:13px;">Получайте полезные материалы и новости юридического мира</p>
-							<form class="subscribe-form-box" onsubmit="event.preventDefault();">
-								<input type="email" placeholder="Ваш e-mail" class="subscribe-input" required="">
-								<button type="submit" class="subscribe-btn">Подписаться</button>
-							</form>
-						</div>
-					</div>
-					<div class="footer-bottom">
-						<div class="footer-copy">© 2026 Правдыч.рф — Все права защищены</div>
-						<div class="footer-love">Сделано с <span style="color:#ff3b30;">❤️</span> для людей</div>
 					</div>
 				</div>
-			</footer>
+				<div class="hero-card middle-card">
+					<div>
+						<div class="card-top">
+							<div class="card-avatar" style="background-image:url('images/people/women/woman_1.png');">
+								<span class="online-dot"></span>
+							</div>
+							<div class="card-category">Трудовое право</div>
+						</div>
+						<h3 class="card-title">Может ли работодатель уволить без объяснения причины?</h3>
+						<div class="card-time">2 часа назад</div>
+						<div class="card-tags">
+							<a href="#" class="card-tag">увольнение</a>
+							<a href="#" class="card-tag">без объяснения</a>
+							<a href="#" class="card-tag">работодатель</a>
+							<a href="#" class="card-tag">трудовой договор</a>
+						</div>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link">Читать статью →</a>
+					</div>
+				</div>
+				<div class="hero-card right-card">
+					<div>
+						<div class="card-top">
+							<div class="card-avatar" style="background-image:url('images/people/men/man_1.png');"></div>
+							<div class="card-category">Семейное право</div>
+						</div>
+						<h3 class="card-title">Как разделить имущество при разводе?</h3>
+						<div class="card-time">5 часов назад</div>
+						<div class="card-tags">
+							<a href="#" class="card-tag">развод</a>
+							<a href="#" class="card-tag">имущество</a>
+							<a href="#" class="card-tag">совместная собственность</a>
+							<a href="#" class="card-tag">раздел имущества</a>
+						</div>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link">Читать статью →</a>
+					</div>
+				</div>
+			</section>
+			<section class="tags-bar">
+				<div class="tags-bar-left">
+					<svg class="tags-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+						<line x1="7" y1="7" x2="7.01" y2="7"/>
+					</svg>
+					<span class="tags-title">Теги</span>
+				</div>
+				<div class="tags-content" id="tagsContent">
+					<a href="#" class="card-tag">трудовое право</a>
+					<a href="#" class="card-tag">семейное право</a>
+					<a href="#" class="card-tag">жилищное право</a>
+					<a href="#" class="card-tag">уголовное право</a>
+					<a href="#" class="card-tag">гражданское право</a>
+					<a href="#" class="card-tag">договоры</a>
+					<a href="#" class="card-tag">защита прав потребителей</a>
+					<a href="#" class="card-tag">налоги</a>
+					<a href="#" class="card-tag">наследство</a>
+					<a href="#" class="card-tag">недвижимость</a>
+					<a href="#" class="card-tag">банкротство</a>
+					<a href="#" class="card-tag">автомобильное право</a>
+				</div>
+				<button class="tags-more-btn" id="tagsToggleBtn">...</button>
+			</section>
+			<section class="lawyers-bar">
+				<div class="lawyers-title">Лучшие<br>адвокаты</div>
+				<div class="lawyers-list">
+					<a href="#" class="lawyer-item">
+						<div class="lawyer-avatar" style="background-image:url('images/people/women/woman_1.png');">
+							<span class="online-dot"></span>
+						</div>
+						<div class="lawyer-info">
+							<div class="lawyer-name">Анна Смирнова</div>
+							<div class="lawyer-answers-count">154 ответа</div>
+							<div class="lawyer-spec">Семейное право</div>
+						</div>
+					</a>
+					<div class="lawyer-divider"></div>
+					<a href="#" class="lawyer-item">
+						<div class="lawyer-avatar" style="background-image:url('images/people/women/woman_2.png');"></div>
+						<div class="lawyer-info">
+							<div class="lawyer-name">Екатерина Волкова</div>
+							<div class="lawyer-answers-count">142 ответа</div>
+							<div class="lawyer-spec">Гражданское право</div>
+						</div>
+					</a>
+					<div class="lawyer-divider"></div>
+					<a href="#" class="lawyer-item">
+						<div class="lawyer-avatar" style="background-image:url('images/people/men/man_2.png');">
+							<span class="online-dot"></span>
+						</div>
+						<div class="lawyer-info">
+							<div class="lawyer-name">Дмитрий Кузнецов</div>
+							<div class="lawyer-answers-count">118 ответов</div>
+							<div class="lawyer-spec">Уголовное право</div>
+						</div>
+					</a>
+				</div>
+				<a href="#" class="lawyers-all-link">Смотреть всех<br>адвокатов →</a>
+			</section>
+			<section class="how-it-works">
+				<div class="how-left">
+					<svg class="how-info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="12" cy="12" r="10"/>
+						<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+						<line x1="12" y1="17" x2="12.01" y2="17"/>
+					</svg>
+					<span class="how-title">Как смотреть ответы?</span>
+				</div>
+				<div class="how-steps">
+					<div class="how-step">
+						<div class="how-step-icon">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+								<polyline points="14 2 14 8 20 8"/>
+								<line x1="16" y1="13" x2="8" y2="13"/>
+								<line x1="16" y1="17" x2="8" y2="17"/>
+								<polyline points="10 9 9 9 8 9"/>
+							</svg>
+						</div>
+						<div class="how-step-text">
+							<span class="how-step-name">1. Выберите вопрос</span>
+							<span class="how-step-sub">Или задайте свой</span>
+						</div>
+					</div>
+					<span class="how-arrow">→</span>
+					<div class="how-step">
+						<div class="how-step-icon">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+							</svg>
+						</div>
+						<div class="how-step-text">
+							<span class="how-step-name">2. Откройте ответы</span>
+							<span class="how-step-sub">Нажмите «Смотреть ответы»</span>
+						</div>
+					</div>
+					<span class="how-arrow">→</span>
+					<div class="how-step">
+						<div class="how-step-icon">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+								<path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+							</svg>
+						</div>
+						<div class="how-step-text">
+							<span class="how-step-name">3. Читайте ответы</span>
+							<span class="how-step-sub">Изучите мнение адвокатов</span>
+						</div>
+					</div>
+					<span class="how-arrow">→</span>
+					<div class="how-step">
+						<div class="how-step-icon">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 20h9"/>
+								<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+							</svg>
+						</div>
+						<div class="how-step-text">
+							<span class="how-step-name">4. Задайте уточнение</span>
+							<span class="how-step-sub">При необходимости</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="bottom-section-row">
+				<div class="popular-col">
+					<div class="section-header-title">Популярные вопросы</div>
+					<div class="content-card">
+						<div class="pop-item expanded">
+							<div class="pop-item-main" onclick="toggleAccordion(this)">
+								<span class="pop-question">Можно ли вернуть деньги за некачественный товар?</span>
+								<div class="pop-meta">
+									<span class="card-tag">Защита прав потребителей</span>
+									<span class="pop-answers">Ответов: 15</span>
+									<div class="pop-avatars">
+										<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_1.png');"></div>
+										<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_1.png');"></div>
+										<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_2.png');"></div>
+									</div>
+									<div class="pop-views">
+										<svg class="pop-eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+											<circle cx="12" cy="12" r="3"/>
+										</svg>1.4k
+									</div>
+									<span class="pop-action-link">Смотреть ответы →</span>
+								</div>
+							</div>
+							<div class="pop-answer-box">
+								<div class="pop-answer-header">
+									<span class="pop-answer-author">Ответ адвоката Анны Смирновой</span>
+									<span class="pop-answer-time">2 часа назад</span>
+								</div>
+								<p class="pop-answer-text">Да, вы имеете право вернуть деньги за некачественный товар в течение 14 дней, не считая дня его покупки (статья 25 Закона РФ «О защите прав потребителей»).</p>
+								<a href="#" class="pop-read-more">Читать статью →</a>
+							</div>
+						</div>
+						<div class="pop-item">
+							<div class="pop-item-main" onclick="toggleAccordion(this)">
+								<span class="pop-question">Что делать, если затопили соседи?</span>
+								<div class="pop-meta">
+									<span class="card-tag">Жилищное право</span>
+									<span class="pop-answers">Ответов: 9</span>
+									<div class="pop-avatars">
+										<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_2.png');"></div>
+										<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_3.png');"></div>
+										<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_1.png');"></div>
+									</div>
+									<div class="pop-views">
+										<svg class="pop-eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+											<circle cx="12" cy="12" r="3"/>
+										</svg>980
+									</div>
+									<span class="pop-action-link">Смотреть ответы →</span>
+								</div>
+							</div>
+							<div class="pop-answer-box">
+								<div class="pop-answer-header">
+									<span class="pop-answer-author">Ответ адвоката Дмитрия Кузнецова</span>
+									<span class="pop-answer-time">5 часов назад</span>
+								</div>
+								<p class="pop-answer-text">В первую очередь необходимо зафиксировать факт затопления, вызвав представителей управляющей компании для составления акта...</p>
+								<a href="#" class="pop-read-more">Читать статью →</a>
+							</div>
+						</div>
+						<div class="pop-item">
+							<div class="pop-item-main" onclick="toggleAccordion(this)">
+								<span class="pop-question">Как оспорить штраф ГИБДД?</span>
+								<div class="pop-meta">
+									<span class="card-tag">Автомобильное право</span>
+									<span class="pop-answers">Ответов: 11</span>
+									<div class="pop-avatars">
+										<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_4.png');"></div>
+										<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_3.png');"></div>
+										<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_1.png');"></div>
+									</div>
+									<div class="pop-views">
+										<svg class="pop-eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+											<circle cx="12" cy="12" r="3"/>
+										</svg>2.1k
+									</div>
+									<span class="pop-action-link">Смотреть ответы →</span>
+								</div>
+							</div>
+							<div class="pop-answer-box">
+								<div class="pop-answer-header">
+									<span class="pop-answer-author">Ответ адвоката Екатерины Волковой</span>
+									<span class="pop-answer-time">Вчера</span>
+								</div>
+								<p class="pop-answer-text">Штраф можно оспорить в течение 10 дней с момента получения копии постановления. Потребуется составить жалобу в ГИБДД или суд...</p>
+								<a href="#" class="pop-read-more">Читать статью →</a>
+							</div>
+						</div>
+						<div class="pop-item">
+							<div class="pop-item-main" onclick="toggleAccordion(this)">
+								<span class="pop-question">Как оформить наследство по завещанию?</span>
+								<div class="pop-meta">
+									<span class="card-tag">Наследство</span>
+									<span class="pop-answers">Ответов: 7</span>
+									<div class="pop-avatars">
+										<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_1.png');"></div>
+										<div class="pop-mini-avatar" style="background-image:url('images/people/women/woman_2.png');"></div>
+										<div class="pop-mini-avatar" style="background-image:url('images/people/men/man_2.png');"></div>
+									</div>
+									<div class="pop-views">
+										<svg class="pop-eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+											<circle cx="12" cy="12" r="3"/>
+										</svg>850
+									</div>
+									<span class="pop-action-link">Смотреть ответы →</span>
+								</div>
+							</div>
+							<div class="pop-answer-box">
+								<div class="pop-answer-header">
+									<span class="pop-answer-author">Ответ адвоката Анны Смирновой</span>
+									<span class="pop-answer-time">3 дня назад</span>
+								</div>
+								<p class="pop-answer-text">Для принятия наследства необходимо обратиться к нотариусу по месту открытия наследства в течение 6 месяцев со дня смерти наследодателя с паспортом и завещанием.</p>
+								<a href="#" class="pop-read-more">Читать статью →</a>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="pop-all-btn">Смотреть все вопросы →</a>
+				</div>
+				<div class="rating-col">
+					<div class="lawyer-cta-banner">
+						<span class="lawyer-cta-badge">Для специалистов</span>
+						<h3 class="lawyer-cta-title">Вы юрист или адвокат?</h3>
+						<p class="lawyer-cta-desc">Присоединяйтесь к платформе, помогайте людям, отвечайте на вопросы и находите новых клиентов.</p>
+						<a href="#" class="lawyer-cta-btn">Зарегистрироваться как эксперт</a>
+					</div>
+					<div class="rating-header-bar">
+						<span class="section-header-title">Рейтинг адвокатов</span>
+						<a href="#" class="rating-all-link">Весь рейтинг →</a>
+					</div>
+					<div class="content-card">
+						<div class="rating-list">
+							<a href="#" class="rating-item">
+								<div class="rating-left">
+									<span class="rating-pos">1.</span>
+									<span class="rating-name">Анна Смирнова</span>
+								</div>
+								<span class="rating-answers-tag">154 ответа</span>
+							</a>
+							<a href="#" class="rating-item">
+								<div class="rating-left">
+									<span class="rating-pos">2.</span>
+									<span class="rating-name">Екатерина Волкова</span>
+								</div>
+								<span class="rating-answers-tag">142 ответа</span>
+							</a>
+							<a href="#" class="rating-item">
+								<div class="rating-left">
+									<span class="rating-pos">3.</span>
+									<span class="rating-name">Дмитрий Кузнецов</span>
+								</div>
+								<span class="rating-answers-tag">118 ответов</span>
+							</a>
+							<a href="#" class="rating-item">
+								<div class="rating-left">
+									<span class="rating-pos">4.</span>
+									<span class="rating-name">Игорь Соколов</span>
+								</div>
+								<span class="rating-answers-tag">95 ответов</span>
+							</a>
+							<a href="#" class="rating-item">
+								<div class="rating-left">
+									<span class="rating-pos">5.</span>
+									<span class="rating-name">Мария Лебедева</span>
+								</div>
+								<span class="rating-answers-tag">82 ответа</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-			<script>
-				// Теги разворот/сворачивание
-				const toggleBtn = document.getElementById('tagsToggleBtn');
-				const tagsContent = document.getElementById('tagsContent');
-				toggleBtn.addEventListener('click', () => {
-					const isExpanded = tagsContent.classList.toggle('expanded');
-					toggleBtn.classList.toggle('active', isExpanded);
-					tagsContent.style.maxHeight = isExpanded ? tagsContent.scrollHeight + 'px' : '26px';
-				});
+		<div class="modal-overlay" id="askModalOverlay">
+			<div class="modal-card">
+				<button class="modal-close" onclick="closeAskModal()">&times;</button>
+				<div class="modal-step active" id="modalStep1">
+					<span class="modal-free-badge">Бесплатно</span>
+					<h3 class="modal-title">Задайте вопрос юристу</h3>
+					<p class="modal-subtitle">Опишите вашу проблему. Юристы дадут первичную консультацию абсолютно бесплатно.</p>
+					<form onsubmit="submitStep1(event)">
+						<div class="form-group">
+							<label>Ваше имя</label>
+							<input type="text" id="inputName" placeholder="Как к вам обращаться?" required="">
+						</div>
+						<div class="form-group">
+							<label>Ваш вопрос</label>
+							<textarea id="inputQuestion" rows="4" placeholder="Подробно опишите ситуацию..." required=""></textarea>
+						</div>
+						<div class="form-group">
+							<label>Телефон для подтверждения</label>
+							<input type="tel" id="inputPhone" placeholder="+7 (999) 000-00-00" required="">
+						</div>
+						<button type="submit" class="modal-submit-btn">Получить код подтверждения</button>
+					</form>
+				</div>
+				<div class="modal-step" id="modalStep2">
+					<h3 class="modal-title">Подтверждение номера</h3>
+					<p class="modal-subtitle">Мы отправили SMS с 4-значным кодом подтверждения на ваш номер телефона.</p>
+					<form onsubmit="submitStep2(event)">
+						<div class="code-inputs-container">
+							<input type="text" maxlength="1" class="code-digit-input" required="" autofocus="">
+							<input type="text" maxlength="1" class="code-digit-input" required="">
+							<input type="text" maxlength="1" class="code-digit-input" required="">
+							<input type="text" maxlength="1" class="code-digit-input" required="">
+						</div>
+						<div class="resend-container" id="resendCodeContainer">
+							Отправить код повторно через <span id="resendTimer">30</span> сек
+						</div>
+						<button type="submit" class="modal-submit-btn">Подтвердить и отправить</button>
+					</form>
+				</div>
+				<div class="modal-step" id="modalStep3" style="text-align:center;">
+					<div class="success-icon-box">✓</div>
+					<h3 class="modal-title">Вопрос на модерации</h3>
+					<p class="modal-subtitle">Спасибо! Ваш вопрос успешно получен. После короткой проверки модератором он появится на сайте, и юристы начнут писать ответы.</p>
+					<button type="button" class="modal-submit-btn" onclick="closeAskModal()">Понятно</button>
+				</div>
+			</div>
+		</div>
 
-				// Раскрытие аккордеона
-				function toggleAccordion(element) {
-					const item = element.closest('.pop-item');
-					item.classList.toggle('expanded');
-				}
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-top">
+					<!-- Колонка 1: Бренд -->
+					<div class="footer-col">
+						<span class="footer-brand-name">Правдыч.рф</span>
+						<p class="footer-brand-tagline">Бесплатная юридическая помощь. Профессиональные ответы на юридические вопросы от проверенных адвокатов.</p>
+						<a href="mailto:info@правдыч.рф" class="footer-email-link">info@правдыч.рф</a>
+					</div>
 
-				// Мобильное меню (бургер)
-				function toggleMobileMenu() {
-					const menu = document.getElementById('mobileMenu');
-					const overlay = document.getElementById('mobileOverlay');
-					const burger = document.getElementById('burgerBtn');
-					menu.classList.toggle('open');
-					overlay.classList.toggle('active');
-					burger.classList.toggle('active');
-					document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
-				}
+					<!-- Колонка 2: Платформа -->
+					<div class="footer-col">
+						<h4 class="footer-heading">Платформа</h4>
+						<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Платформа</button>
+						<div class="footer-mobile-content">
+							<ul class="footer-links">
+								<li><a href="#">Вопросы</a></li>
+								<li><a href="#">Юристы</a></li>
+								<li><a href="#">Рейтинг</a></li>
+								<li><a href="#">Статьи</a></li>
+								<li><a href="#">О сервисе</a></li>
+								<li><a href="#">Как это работает</a></li>
+								<li><a href="#">Правила сервиса</a></li>
+								<li><a href="#">Конфиденциальность</a></li>
+							</ul>
+						</div>
+					</div>
 
-				// Модалка
-				const modalOverlay = document.getElementById('askModalOverlay');
-				const step1 = document.getElementById('modalStep1');
-				const step2 = document.getElementById('modalStep2');
-				const step3 = document.getElementById('modalStep3');
-				const codeInputs = document.querySelectorAll('.code-digit-input');
-				const resendCodeContainer = document.getElementById('resendCodeContainer');
-				let countdownInterval;
-				let timeLeft = 30;
+					<!-- Колонка 3: Помощь -->
+					<div class="footer-col">
+						<h4 class="footer-heading">Помощь</h4>
+						<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Помощь</button>
+						<div class="footer-mobile-content">
+							<ul class="footer-links">
+								<li><a href="#">Центр поддержки</a></li>
+								<li><a href="#">Частые вопросы</a></li>
+								<li><a href="#">Для адвокатов</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
 
-				function openAskModal() {
-					step1.classList.add('active');
-					step2.classList.remove('active');
-					step3.classList.remove('active');
-					modalOverlay.classList.add('active');
-					clearInterval(countdownInterval);
-					document.body.style.overflow = 'hidden';
-				}
-				function closeAskModal() {
-					modalOverlay.classList.remove('active');
-					clearInterval(countdownInterval);
-					document.body.style.overflow = '';
-				}
-				modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeAskModal(); });
+					<!-- Колонка 4: Правовая информация -->
+					<div class="footer-col">
+						<h4 class="footer-heading">Правовая информация</h4>
+						<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Правовая информация</button>
+						<div class="footer-mobile-content">
+							<ul class="footer-links">
+								<li><a href="#">Пользовательское соглашение</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#">Обработка персональных данных</a></li>
+								<li><a href="#">Согласие на обработку данных</a></li>
+							</ul>
+						</div>
+					</div>
 
-				function startResendTimer() {
-					timeLeft = 30;
-					resendCodeContainer.innerHTML = 'Отправить код повторно через <span id="resendTimer">30</span> сек';
-					clearInterval(countdownInterval);
-					countdownInterval = setInterval(() => {
-						timeLeft--;
-						const timerSpan = document.getElementById('resendTimer');
-						if (timerSpan) timerSpan.textContent = timeLeft;
-						if (timeLeft <= 0) {
-							clearInterval(countdownInterval);
-							resendCodeContainer.innerHTML = '<a href="#" class="resend-link" onclick="handleResendCode(event)">Отправить код повторно</a>';
-						}
-					}, 1000);
-				}
-				function handleResendCode(event) {
-					event.preventDefault();
-					codeInputs.forEach(input => input.value = '');
-					codeInputs[0].focus();
-					startResendTimer();
-				}
-				function submitStep1(event) {
-					event.preventDefault();
-					step1.classList.remove('active');
-					step2.classList.add('active');
-					const firstDigitInput = step2.querySelector('.code-digit-input');
-					if (firstDigitInput) setTimeout(() => firstDigitInput.focus(), 100);
-					startResendTimer();
-				}
-				function submitStep2(event) {
-					event.preventDefault();
-					clearInterval(countdownInterval);
-					step2.classList.remove('active');
-					step3.classList.add('active');
-				}
-				codeInputs.forEach((input, index) => {
-					input.addEventListener('input', (e) => {
-						if (e.target.value.length === 1 && index < codeInputs.length - 1) {
-							codeInputs[index + 1].focus();
-						}
-					});
-					input.addEventListener('keydown', (e) => {
-						if (e.key === 'Backspace' && !e.target.value && index > 0) {
-							codeInputs[index - 1].focus();
-						}
-					});
-				});
+					<!-- Колонка 5: Подписка -->
+					<div class="footer-col">
+						<h4 class="footer-heading">Подпишитесь на рассылку</h4>
+						<p class="footer-brand-tagline" style="max-width:100%;font-size:13px;margin-bottom:12px;">Получайте полезные материалы и новости юридического мира</p>
+						<form class="subscribe-form-box" onsubmit="event.preventDefault();">
+							<input type="email" placeholder="Ваш e-mail" class="subscribe-input" required="">
+							<button type="submit" class="subscribe-btn">Подписаться</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="footer-copy">© 2026 Правдыч.рф — Все права защищены</div>
+					<div class="footer-love">Сделано с <span style="color:#ff3b30;">❤️</span> для людей</div>
+				</div>
+			</div>
+		</footer>
 
-				// Футер: раскрывающиеся колонки на мобильных
-				function toggleFooterCol(btn) {
-					const content = btn.nextElementSibling;
-					if (content && content.classList.contains('footer-mobile-content')) {
-						content.classList.toggle('open');
-						btn.classList.toggle('open');
+		<script>
+			// Теги разворот/сворачивание
+			const toggleBtn = document.getElementById('tagsToggleBtn');
+			const tagsContent = document.getElementById('tagsContent');
+			toggleBtn.addEventListener('click', () => {
+				const isExpanded = tagsContent.classList.toggle('expanded');
+				toggleBtn.classList.toggle('active', isExpanded);
+				tagsContent.style.maxHeight = isExpanded ? tagsContent.scrollHeight + 'px' : '26px';
+			});
+
+			// Раскрытие аккордеона
+			function toggleAccordion(element) {
+				const item = element.closest('.pop-item');
+				item.classList.toggle('expanded');
+			}
+
+			// Мобильное меню (бургер)
+			function toggleMobileMenu() {
+				const menu = document.getElementById('mobileMenu');
+				const overlay = document.getElementById('mobileOverlay');
+				const burger = document.getElementById('burgerBtn');
+				menu.classList.toggle('open');
+				overlay.classList.toggle('active');
+				burger.classList.toggle('active');
+				document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+			}
+
+			// Модалка
+			const modalOverlay = document.getElementById('askModalOverlay');
+			const step1 = document.getElementById('modalStep1');
+			const step2 = document.getElementById('modalStep2');
+			const step3 = document.getElementById('modalStep3');
+			const codeInputs = document.querySelectorAll('.code-digit-input');
+			const resendCodeContainer = document.getElementById('resendCodeContainer');
+			let countdownInterval;
+			let timeLeft = 30;
+
+			function openAskModal() {
+				step1.classList.add('active');
+				step2.classList.remove('active');
+				step3.classList.remove('active');
+				modalOverlay.classList.add('active');
+				clearInterval(countdownInterval);
+				document.body.style.overflow = 'hidden';
+			}
+			function closeAskModal() {
+				modalOverlay.classList.remove('active');
+				clearInterval(countdownInterval);
+				document.body.style.overflow = '';
+			}
+			modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeAskModal(); });
+
+			function startResendTimer() {
+				timeLeft = 30;
+				resendCodeContainer.innerHTML = 'Отправить код повторно через <span id="resendTimer">30</span> сек';
+				clearInterval(countdownInterval);
+				countdownInterval = setInterval(() => {
+					timeLeft--;
+					const timerSpan = document.getElementById('resendTimer');
+					if (timerSpan) timerSpan.textContent = timeLeft;
+					if (timeLeft <= 0) {
+						clearInterval(countdownInterval);
+						resendCodeContainer.innerHTML = '<a href="#" class="resend-link" onclick="handleResendCode(event)">Отправить код повторно</a>';
 					}
+				}, 1000);
+			}
+			function handleResendCode(event) {
+				event.preventDefault();
+				codeInputs.forEach(input => input.value = '');
+				codeInputs[0].focus();
+				startResendTimer();
+			}
+			function submitStep1(event) {
+				event.preventDefault();
+				step1.classList.remove('active');
+				step2.classList.add('active');
+				const firstDigitInput = step2.querySelector('.code-digit-input');
+				if (firstDigitInput) setTimeout(() => firstDigitInput.focus(), 100);
+				startResendTimer();
+			}
+			function submitStep2(event) {
+				event.preventDefault();
+				clearInterval(countdownInterval);
+				step2.classList.remove('active');
+				step3.classList.add('active');
+			}
+			codeInputs.forEach((input, index) => {
+				input.addEventListener('input', (e) => {
+					if (e.target.value.length === 1 && index < codeInputs.length - 1) {
+						codeInputs[index + 1].focus();
+					}
+				});
+				input.addEventListener('keydown', (e) => {
+					if (e.key === 'Backspace' && !e.target.value && index > 0) {
+						codeInputs[index - 1].focus();
+					}
+				});
+			});
+
+			// Футер: раскрывающиеся колонки на мобильных
+			function toggleFooterCol(btn) {
+				const content = btn.nextElementSibling;
+				if (content && content.classList.contains('footer-mobile-content')) {
+					content.classList.toggle('open');
+					btn.classList.toggle('open');
 				}
-			</script>
-		</body>
-	</html>
+			}
+		</script>
+	</body>
+</html>
