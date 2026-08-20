@@ -12,8 +12,32 @@
 								body { font-family:'Manrope','Inter','Roboto',sans-serif; background:#fafaf9; min-height:100vh; color:#1a1a1a; -webkit-font-smoothing:antialiased; }
 								.header { position:fixed; top:0; left:0; width:100%; background:rgba(250,250,249,0.9); backdrop-filter:blur(8px); padding:20px 32px; display:flex; justify-content:center; z-index:1000; transition:all 0.3s; }
 								.header-container { max-width:1280px; width:100%; display:flex; align-items:center; justify-content:space-between; }
-								.logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
-								.logo img { display:block; height:64px; width:auto; object-fit:contain; transition:transform 0.2s; }
+								.logo {
+								display: flex;
+								flex-direction: column;  
+								align-items: flex-start;      
+								text-decoration: none;
+								flex-shrink: 0;
+								}
+
+								.logo img {
+								display: block;
+								height: 64px;
+								width: auto;
+								object-fit: contain;
+								transition: transform 0.2s;
+								}
+
+								.logo-subtitle {
+								font-size: 13px;
+								font-weight: 200;
+								color: #888;
+								letter-spacing: 0.03em;
+								margin-top: 0;
+								white-space: nowrap;
+								position: relative;
+								top: -10px;
+								}
 								.logo:hover img { transform:scale(1.02); }
 								.nav-and-actions { display:flex; align-items:center; gap:36px; }
 								.nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
@@ -431,7 +455,8 @@
 			<div class="header-container">
 				<a href="#" class="logo" aria-label="Правдыч.рф — главная">
 					<img src="images/logo.png" alt="Правдыч.рф">
-            </a>
+						<span class="logo-subtitle">Бесплатная юридическая помощь</span>
+					</a>
 				<div class="nav-and-actions">
 					<ul class="nav-links">
 						<li>
@@ -785,7 +810,7 @@
 						<span class="lawyer-cta-badge">Для специалистов</span>
 						<h3 class="lawyer-cta-title">Вы юрист или адвокат?</h3>
 						<p class="lawyer-cta-desc">Присоединяйтесь к платформе, помогайте людям, отвечайте на вопросы и находите новых клиентов.</p>
-						<a href="#" class="lawyer-cta-btn">Зарегистрироваться как эксперт</a>
+						<a href="expert-registration.html" class="lawyer-cta-btn">Зарегистрироваться как эксперт</a>
 					</div>
 					<div class="rating-header-bar">
 						<span class="section-header-title">Рейтинг адвокатов</span>
@@ -868,60 +893,33 @@
 										<input type="text" maxlength="1" class="code-digit-input" required="">
                     </div>
 						<div class="resend-container" id="resendCodeContainer">
-								Отправить код повторно через <span id="resendTimer">30</span> сек
-							</div>
-							<button type="submit" class="modal-submit-btn">Подтвердить и отправить</button>
-						</form>
-					</div>
-					<div class="modal-step" id="modalStep3" style="text-align:center;">
-						<div class="success-icon-box">✓</div>
-						<h3 class="modal-title">Вопрос на модерации</h3>
-						<p class="modal-subtitle">Спасибо! Ваш вопрос успешно получен. После короткой проверки модератором он появится на сайте, и юристы начнут писать ответы.</p>
-						<button type="button" class="modal-submit-btn" onclick="closeAskModal()">Понятно</button>
-					</div>
+							Отправить код повторно через <span id="resendTimer">30</span> сек
+						</div>
+						<button type="submit" class="modal-submit-btn">Подтвердить и отправить</button>
+					</form>
+				</div>
+				<div class="modal-step" id="modalStep3" style="text-align:center;">
+					<div class="success-icon-box">✓</div>
+					<h3 class="modal-title">Вопрос на модерации</h3>
+					<p class="modal-subtitle">Спасибо! Ваш вопрос успешно получен. После короткой проверки модератором он появится на сайте, и юристы начнут писать ответы.</p>
+					<button type="button" class="modal-submit-btn" onclick="closeAskModal()">Понятно</button>
 				</div>
 			</div>
+		</div>
 
-			<footer class="footer">
-				<div class="footer-container">
-					<div class="footer-top">
-						<div class="footer-col">
-							<span class="footer-brand-name">Правдыч.рф</span>
-							<p class="footer-brand-tagline">Бесплатная юридическая помощь. Профессиональные ответы на юридические вопросы от проверенных адвокатов.</p>
-							<a href="mailto:info@правдыч.рф" class="footer-email-link">info@правдыч.рф</a>
-						</div>
-						<div class="footer-col">
-							<h4 class="footer-heading">Платформа</h4>
-							<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Платформа</button>
-							<div class="footer-mobile-content">
-								<ul class="footer-links">
-									<li>
-										<a href="#">Вопросы</a>
-									</li>
-									<li>
-										<a href="#">Юристы</a>
-									</li>
-									<li>
-										<a href="#">Рейтинг</a>
-									</li>
-									<li>
-										<a href="#">Статьи</a>
-									</li>
-									<li>
-										<a href="#">О сервисе</a>
-									</li>
-									<li>
-										<a href="#">Как это работает</a>
-									</li>
-									<li>
-										<a href="#">Правила сервиса</a>
-									</li>
-									<li>
-										<a href="#">Конфиденциальность</a>
-									</li>
-								</ul>
-							</div>
-							<ul class="footer-links desktop-links">
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-top">
+					<div class="footer-col">
+						<span class="footer-brand-name">Правдыч.рф</span>
+						<p class="footer-brand-tagline">Бесплатная юридическая помощь. Профессиональные ответы на юридические вопросы от проверенных адвокатов.</p>
+						<a href="mailto:info@правдыч.рф" class="footer-email-link">info@правдыч.рф</a>
+					</div>
+					<div class="footer-col">
+						<h4 class="footer-heading">Платформа</h4>
+						<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Платформа</button>
+						<div class="footer-mobile-content">
+							<ul class="footer-links">
 								<li>
 									<a href="#">Вопросы</a>
 								</li>
@@ -948,26 +946,38 @@
 								</li>
 							</ul>
 						</div>
-						<div class="footer-col">
-							<h4 class="footer-heading">Помощь</h4>
-							<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Помощь</button>
-							<div class="footer-mobile-content">
-								<ul class="footer-links">
-									<li>
-										<a href="#">Центр поддержки</a>
-									</li>
-									<li>
-										<a href="#">Частые вопросы</a>
-									</li>
-									<li>
-										<a href="#">Для адвокатов</a>
-									</li>
-									<li>
-										<a href="#">Контакты</a>
-									</li>
-								</ul>
-							</div>
-							<ul class="footer-links desktop-links">
+						<ul class="footer-links desktop-links">
+							<li>
+								<a href="#">Вопросы</a>
+							</li>
+							<li>
+								<a href="#">Юристы</a>
+							</li>
+							<li>
+								<a href="#">Рейтинг</a>
+							</li>
+							<li>
+								<a href="#">Статьи</a>
+							</li>
+							<li>
+								<a href="#">О сервисе</a>
+							</li>
+							<li>
+								<a href="#">Как это работает</a>
+							</li>
+							<li>
+								<a href="#">Правила сервиса</a>
+							</li>
+							<li>
+								<a href="#">Конфиденциальность</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4 class="footer-heading">Помощь</h4>
+						<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Помощь</button>
+						<div class="footer-mobile-content">
+							<ul class="footer-links">
 								<li>
 									<a href="#">Центр поддержки</a>
 								</li>
@@ -982,26 +992,26 @@
 								</li>
 							</ul>
 						</div>
-						<div class="footer-col">
-							<h4 class="footer-heading">Правовая информация</h4>
-							<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Правовая информация</button>
-							<div class="footer-mobile-content">
-								<ul class="footer-links">
-									<li>
-										<a href="#">Пользовательское соглашение</a>
-									</li>
-									<li>
-										<a href="#">Политика конфиденциальности</a>
-									</li>
-									<li>
-										<a href="#">Обработка персональных данных</a>
-									</li>
-									<li>
-										<a href="#">Согласие на обработку данных</a>
-									</li>
-								</ul>
-							</div>
-							<ul class="footer-links desktop-links">
+						<ul class="footer-links desktop-links">
+							<li>
+								<a href="#">Центр поддержки</a>
+							</li>
+							<li>
+								<a href="#">Частые вопросы</a>
+							</li>
+							<li>
+								<a href="#">Для адвокатов</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4 class="footer-heading">Правовая информация</h4>
+						<button class="footer-mobile-toggle" onclick="toggleFooterCol(this)">Правовая информация</button>
+						<div class="footer-mobile-content">
+							<ul class="footer-links">
 								<li>
 									<a href="#">Пользовательское соглашение</a>
 								</li>
@@ -1016,137 +1026,152 @@
 								</li>
 							</ul>
 						</div>
-						<div class="footer-col">
-							<h4 class="footer-heading">Подпишитесь на рассылку</h4>
-							<p class="footer-brand-tagline" style="max-width:100%;font-size:13px;margin-bottom:12px;">Получайте полезные материалы и новости юридического мира</p>
-							<form class="subscribe-form-box" onsubmit="event.preventDefault();">
-								<input type="email" placeholder="Ваш e-mail" class="subscribe-input" required="">
-									<button type="submit" class="subscribe-btn">Подписаться</button>
-								</form>
-							</div>
-						</div>
-						<div class="footer-bottom">
-							<div class="footer-copy">© 2026 Правдыч.рф — Все права защищены</div>
-							<div class="footer-love">
-								Сделано с <span style="color:#ff3b30;">❤️</span> для людей
-							</div>
-						</div>
+						<ul class="footer-links desktop-links">
+							<li>
+								<a href="#">Пользовательское соглашение</a>
+							</li>
+							<li>
+								<a href="#">Политика конфиденциальности</a>
+							</li>
+							<li>
+								<a href="#">Обработка персональных данных</a>
+							</li>
+							<li>
+								<a href="#">Согласие на обработку данных</a>
+							</li>
+						</ul>
 					</div>
-				</footer>
+					<div class="footer-col">
+						<h4 class="footer-heading">Подпишитесь на рассылку</h4>
+						<p class="footer-brand-tagline" style="max-width:100%;font-size:13px;margin-bottom:12px;">Получайте полезные материалы и новости юридического мира</p>
+						<form class="subscribe-form-box" onsubmit="event.preventDefault();">
+							<input type="email" placeholder="Ваш e-mail" class="subscribe-input" required="">
+								<button type="submit" class="subscribe-btn">Подписаться</button>
+							</form>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="footer-copy">© 2026 Правдыч.рф — Все права защищены</div>
+					<div class="footer-love">
+						Сделано с <span style="color:#ff3b30;">❤️</span> для людей
+					</div>
+				</div>
+			</div>
+		</footer>
 
-				<script>
-					const toggleBtn = document.getElementById('tagsToggleBtn');
-					const tagsContent = document.getElementById('tagsContent');
-					toggleBtn.addEventListener('click', function(e) {
-					e.stopPropagation();
-					const isExpanded = tagsContent.classList.toggle('expanded');
-					this.classList.toggle('active', isExpanded);
-					if (window.innerWidth <= 768) {
-					tagsContent.style.maxHeight = isExpanded ? '500px' : '78px';
-					} else {
-					tagsContent.style.maxHeight = isExpanded ? tagsContent.scrollHeight + 'px' : '26px';
-					}
-					});
-					window.addEventListener('load', function() {
-					if (window.innerWidth <= 768) {
-					tagsContent.style.maxHeight = '78px';
-					}
-					});
-					window.addEventListener('resize', function() {
-					if (window.innerWidth <= 768 && !tagsContent.classList.contains('expanded')) {
-					tagsContent.style.maxHeight = '78px';
-					} else if (window.innerWidth > 768 && !tagsContent.classList.contains('expanded')) {
-					tagsContent.style.maxHeight = '26px';
-					}
-					});
-					function toggleAccordion(element) {
-					const item = element.closest('.pop-item');
-					item.classList.toggle('expanded');
-					}
-					function toggleMobileMenu() {
-					const menu = document.getElementById('mobileMenu');
-					const overlay = document.getElementById('mobileOverlay');
-					const burger = document.getElementById('burgerBtn');
-					menu.classList.toggle('open');
-					overlay.classList.toggle('active');
-					burger.classList.toggle('active');
-					document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
-					}
-					const modalOverlay = document.getElementById('askModalOverlay');
-					const step1 = document.getElementById('modalStep1');
-					const step2 = document.getElementById('modalStep2');
-					const step3 = document.getElementById('modalStep3');
-					const codeInputs = document.querySelectorAll('.code-digit-input');
-					const resendCodeContainer = document.getElementById('resendCodeContainer');
-					let countdownInterval;
-					let timeLeft = 30;
-					function openAskModal() {
-					step1.classList.add('active');
-					step2.classList.remove('active');
-					step3.classList.remove('active');
-					modalOverlay.classList.add('active');
-					clearInterval(countdownInterval);
-					document.body.style.overflow = 'hidden';
-					}
-					function closeAskModal() {
-					modalOverlay.classList.remove('active');
-					clearInterval(countdownInterval);
-					document.body.style.overflow = '';
-					}
-					modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeAskModal(); });
-					function startResendTimer() {
-					timeLeft = 30;
-					resendCodeContainer.innerHTML = 'Отправить код повторно через <span id="resendTimer">30</span> сек';
-					clearInterval(countdownInterval);
-					countdownInterval = setInterval(() => {
-					timeLeft--;
-					const timerSpan = document.getElementById('resendTimer');
-					if (timerSpan) timerSpan.textContent = timeLeft;
-					if (timeLeft <= 0) {
-					clearInterval(countdownInterval);
-					resendCodeContainer.innerHTML = '<a href="#" class="resend-link" onclick="handleResendCode(event)">Отправить код повторно</a>';
-					}
-					}, 1000);
-					}
-					function handleResendCode(event) {
-					event.preventDefault();
-					codeInputs.forEach(input => input.value = '');
-					codeInputs[0].focus();
-					startResendTimer();
-					}
-					function submitStep1(event) {
-					event.preventDefault();
-					step1.classList.remove('active');
-					step2.classList.add('active');
-					const firstDigitInput = step2.querySelector('.code-digit-input');
-					if (firstDigitInput) setTimeout(() => firstDigitInput.focus(), 100);
-					startResendTimer();
-					}
-					function submitStep2(event) {
-					event.preventDefault();
-					clearInterval(countdownInterval);
-					step2.classList.remove('active');
-					step3.classList.add('active');
-					}
-					codeInputs.forEach((input, index) => {
-					input.addEventListener('input', (e) => {
-					if (e.target.value.length === 1 && index < codeInputs.length - 1) {
+		<script>
+			const toggleBtn = document.getElementById('tagsToggleBtn');
+			const tagsContent = document.getElementById('tagsContent');
+			toggleBtn.addEventListener('click', function(e) {
+			e.stopPropagation();
+			const isExpanded = tagsContent.classList.toggle('expanded');
+			this.classList.toggle('active', isExpanded);
+			if (window.innerWidth <= 768) {
+			tagsContent.style.maxHeight = isExpanded ? '500px' : '78px';
+			} else {
+			tagsContent.style.maxHeight = isExpanded ? tagsContent.scrollHeight + 'px' : '26px';
+			}
+			});
+			window.addEventListener('load', function() {
+			if (window.innerWidth <= 768) {
+			tagsContent.style.maxHeight = '78px';
+			}
+			});
+			window.addEventListener('resize', function() {
+			if (window.innerWidth <= 768 && !tagsContent.classList.contains('expanded')) {
+			tagsContent.style.maxHeight = '78px';
+			} else if (window.innerWidth > 768 && !tagsContent.classList.contains('expanded')) {
+			tagsContent.style.maxHeight = '26px';
+			}
+			});
+			function toggleAccordion(element) {
+			const item = element.closest('.pop-item');
+			item.classList.toggle('expanded');
+			}
+			function toggleMobileMenu() {
+			const menu = document.getElementById('mobileMenu');
+			const overlay = document.getElementById('mobileOverlay');
+			const burger = document.getElementById('burgerBtn');
+			menu.classList.toggle('open');
+			overlay.classList.toggle('active');
+			burger.classList.toggle('active');
+			document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+			}
+			const modalOverlay = document.getElementById('askModalOverlay');
+			const step1 = document.getElementById('modalStep1');
+			const step2 = document.getElementById('modalStep2');
+			const step3 = document.getElementById('modalStep3');
+			const codeInputs = document.querySelectorAll('.code-digit-input');
+			const resendCodeContainer = document.getElementById('resendCodeContainer');
+			let countdownInterval;
+			let timeLeft = 30;
+			function openAskModal() {
+			step1.classList.add('active');
+			step2.classList.remove('active');
+			step3.classList.remove('active');
+			modalOverlay.classList.add('active');
+			clearInterval(countdownInterval);
+			document.body.style.overflow = 'hidden';
+			}
+			function closeAskModal() {
+			modalOverlay.classList.remove('active');
+			clearInterval(countdownInterval);
+			document.body.style.overflow = '';
+			}
+			modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeAskModal(); });
+			function startResendTimer() {
+			timeLeft = 30;
+			resendCodeContainer.innerHTML = 'Отправить код повторно через <span id="resendTimer">30</span> сек';
+			clearInterval(countdownInterval);
+			countdownInterval = setInterval(() => {
+			timeLeft--;
+			const timerSpan = document.getElementById('resendTimer');
+			if (timerSpan) timerSpan.textContent = timeLeft;
+			if (timeLeft <= 0) {
+			clearInterval(countdownInterval);
+			resendCodeContainer.innerHTML = '<a href="#" class="resend-link" onclick="handleResendCode(event)">Отправить код повторно</a>';
+			}
+			}, 1000);
+			}
+			function handleResendCode(event) {
+			event.preventDefault();
+			codeInputs.forEach(input => input.value = '');
+			codeInputs[0].focus();
+			startResendTimer();
+			}
+			function submitStep1(event) {
+			event.preventDefault();
+			step1.classList.remove('active');
+			step2.classList.add('active');
+			const firstDigitInput = step2.querySelector('.code-digit-input');
+			if (firstDigitInput) setTimeout(() => firstDigitInput.focus(), 100);
+			startResendTimer();
+			}
+			function submitStep2(event) {
+			event.preventDefault();
+			clearInterval(countdownInterval);
+			step2.classList.remove('active');
+			step3.classList.add('active');
+			}
+			codeInputs.forEach((input, index) => {
+			input.addEventListener('input', (e) => {
+			if (e.target.value.length === 1 && index < codeInputs.length - 1) {
                     codeInputs[index + 1].focus();
                 }
             });
             input.addEventListener('keydown', (e) => {
                 if (e.key === 'Backspace' && !e.target.value && index > 0) {
-					codeInputs[index - 1].focus();
-					}
-					});
-					});
-					function toggleFooterCol(btn) {
-					const content = btn.nextElementSibling;
-					if (content && content.classList.contains('footer-mobile-content')) {
-					content.classList.toggle('open');
-					btn.classList.toggle('open');
-					}
-					}
-				</script>
-			</body>
-		</html>
+			codeInputs[index - 1].focus();
+			}
+			});
+			});
+			function toggleFooterCol(btn) {
+			const content = btn.nextElementSibling;
+			if (content && content.classList.contains('footer-mobile-content')) {
+			content.classList.toggle('open');
+			btn.classList.toggle('open');
+			}
+			}
+		</script>
+	</body>
+</html>
